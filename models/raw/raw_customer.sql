@@ -4,7 +4,4 @@
     )
 }}
 
-
-select * 
-from 
-raw.global_mart.orders
+select * from raw.global_mart.customers
