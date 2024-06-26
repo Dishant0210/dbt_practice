@@ -1,4 +1,5 @@
 SELECT
+  {{ dbt_utils.generate_surrogate_key(['o.orderid', 'c.customerid','p.productid']) }} as skorders,
   o.orderid,
   o.orderdate,
   o.shipdate,
@@ -20,3 +21,4 @@ LEFT JOIN {{ ref('raw_customer') }} AS c
   ON o.customerid = c.customerid
 LEFT JOIN {{ ref('raw_product') }} AS p
   ON o.productid = p.productid
+
