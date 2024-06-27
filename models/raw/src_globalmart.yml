@@ -7,6 +7,7 @@ sources:
     schema: global_mart
     tables:
       - name: customers
+        description: raw customer table
       - name: orders
         description: raw order table
         columns:
@@ -16,3 +17,4 @@ sources:
               - unique
               - not_null
       - name: product
+        description: raw product table
