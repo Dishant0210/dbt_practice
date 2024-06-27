@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: raw_customer
+    description: customer table from snowflake
     columns:
       - name: customerid
         tests:
@@ -9,6 +10,7 @@ models:
           - not_null
 
   - name: raw_orders
+    description: order table from snowflake
     columns:
       - name: orderid
         tests:
